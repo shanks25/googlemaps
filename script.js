@@ -3,7 +3,7 @@
     // var options = {
     //   types: ['(regions)'],
     //   componentRestrictions: {country: "IN"}
-    // };
+    // }; Source- https://stackoverflow.com/questions/3490622/get-latitude-and-longitude-based-on-location-name-with-google-autocomplete-api
     var options = {}
 
     var autocomplete = new google.maps.places.Autocomplete(input, options);
