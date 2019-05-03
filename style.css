@@ -1,7 +1,11 @@
-.container{
-	margin: 2%;
-}
-#map{
-height: 500px;
-width: 900px;
-}
+  .wrapper{
+			text-align: center;
+			width: 800px;
+			margin: auto;
+			
+		}
+		input{
+			height: 30px;
+			width: 355px;
+			padding-left:10px
+		}

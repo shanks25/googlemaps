@@ -6,48 +6,15 @@
 	<meta charset="UTF-8">
 	<title>Title</title>
 </head>
-<body>
-	<div class="container">
-      <div>
-        <div id="title">
-          Autocomplete search
-        </div>
-            <div id="pac-container" style="width: 100%">
-        <input id="pac-input"  style="width: 80%" type="text"
-            placeholder="Enter a location">
-      </div>
-        <div id="type-selector" class="pac-controls">
-          <input type="radio" name="type" id="changetype-all" checked="checked">
-          <label for="changetype-all">All</label>
+<body onload="initialize()">
+	<div id="locationField">
+		<input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+	</div>
 
-          <input type="radio" name="type" id="changetype-establishment">
-          <label for="changetype-establishment">Establishments</label>
-
-          <input type="radio" name="type" id="changetype-address">
-          <label for="changetype-address">Addresses</label>
-
-          <input type="radio" name="type" id="changetype-geocode">
-          <label for="changetype-geocode">Geocodes</label>
-        </div>
-        <div id="strict-bounds-selector" class="pac-controls">
-          <input type="checkbox" id="use-strict-bounds" value="">
-          <label for="use-strict-bounds">Strict Bounds</label>
-        </div>
-      </div>
-       <div class="pac-card" id="pac-card">
-  
-    </div>
-    <div id="map"></div>
-    <div id="infowindow-content">
-      <img src="" width="16" height="16" id="place-icon">
-      <span id="place-name"  class="title"></span><br>
-      <span id="place-address"></span>
-    </div>
-    </div>
-
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 
 	<script src="script.js"></script>
 	<script	src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDkKetQwosod2SZ7ZGCpxuJdxY3kxo5Po&libraries=places&callback=initMap"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDkKetQwosod2SZ7ZGCpxuJdxY3kxo5Po&libraries=places&callback=initializeAutocomplete"></script>
 </body>
 </html>
