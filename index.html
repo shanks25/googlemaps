@@ -7,9 +7,13 @@
 	<title>Title</title>
 </head>
 <body onload="initialize()">
-	<div id="locationField">
-		<input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
-	</div>
+	<textarea placeholder="Enter Area name to populate Latitude and Longitude" name="address" onFocus="initializeAutocomplete()" id="locality" ></textarea><br>
+
+<input type="text" name="city" id="city" placeholder="City" value="" ><br>
+<input type="text" name="latitude" id="latitude" placeholder="Latitude" value="" ><br>
+<input type="text" name="longitude" id="longitude" placeholder="Longitude" value="" ><br>
+<input type="text" name="place_id" id="location_id" placeholder="Location Ids" value="" ><br>
+
 
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 
