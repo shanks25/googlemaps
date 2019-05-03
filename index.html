@@ -7,22 +7,47 @@
 	<title>Title</title>
 </head>
 <body>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col">
-				<h1 class="display-4">My Map</h1>	
-			</div>
-		</div>
-		<div class="row">
-			<div class="col">
-				<div id="map"></div>
-			</div>
-		</div>
-	</div>
+	<div class="container">
+      <div>
+        <div id="title">
+          Autocomplete search
+        </div>
+            <div id="pac-container" style="width: 100%">
+        <input id="pac-input"  style="width: 80%" type="text"
+            placeholder="Enter a location">
+      </div>
+        <div id="type-selector" class="pac-controls">
+          <input type="radio" name="type" id="changetype-all" checked="checked">
+          <label for="changetype-all">All</label>
+
+          <input type="radio" name="type" id="changetype-establishment">
+          <label for="changetype-establishment">Establishments</label>
+
+          <input type="radio" name="type" id="changetype-address">
+          <label for="changetype-address">Addresses</label>
+
+          <input type="radio" name="type" id="changetype-geocode">
+          <label for="changetype-geocode">Geocodes</label>
+        </div>
+        <div id="strict-bounds-selector" class="pac-controls">
+          <input type="checkbox" id="use-strict-bounds" value="">
+          <label for="use-strict-bounds">Strict Bounds</label>
+        </div>
+      </div>
+       <div class="pac-card" id="pac-card">
+  
+    </div>
+    <div id="map"></div>
+    <div id="infowindow-content">
+      <img src="" width="16" height="16" id="place-icon">
+      <span id="place-name"  class="title"></span><br>
+      <span id="place-address"></span>
+    </div>
+    </div>
 
 
 	<script src="script.js"></script>
 	<script	src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDkKetQwosod2SZ7ZGCpxuJdxY3kxo5Po&callback=initMap"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDkKetQwosod2SZ7ZGCpxuJdxY3kxo5Po&libraries=places&callback=initMap"></script>
 </body>
 </html>
