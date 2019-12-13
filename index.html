@@ -8,17 +8,17 @@
 </head>
 <body style="margin: 3%">
 	<input type="text"onFocus="initializeAutocomplete()" id="locality"  style="width: 100%;"placeholder="Enter Area name to populate Latitude and Longitude" name="address" ><br>
-<div>
-<input type="text" name="city" id="city" placeholder="City" value="" ><br>
-<input type="text" name="latitude" id="latitude" placeholder="Latitude" value="" ><br>
-<input type="text" name="longitude" id="longitude" placeholder="Longitude" value="" ><br>
-<input type="text" name="place_id" id="location_id" placeholder="Location Ids" value="" ><br>
-</div>
+	<div>
+		<input type="text" name="city" id="city" placeholder="City" value="" ><br>
+		<input type="text" name="latitude" id="latitude" placeholder="Latitude" value="" ><br>
+		<input type="text" name="longitude" id="longitude" placeholder="Longitude" value="" ><br>
+		<input type="text" name="place_id" id="location_id" placeholder="Location Ids" value="" ><br>
+	</div>
 
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> -->
 
-	<script src="script.js"></script>
 	<script	src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDkKetQwosod2SZ7ZGCpxuJdxY3kxo5Po&libraries=places&callback=initializeAutocomplete"></script>
+	<script src="script.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDkKetQwosod2SZ7ZGCpxuJdxY3kxo5Po&libraries=places"></script>
 </body>
 </html>
